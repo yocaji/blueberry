@@ -1,11 +1,19 @@
-const obj = {
+const obj: {
+  foo: number;
+  bar: string;
+} = {
   foo: 123,
   bar: "Hello, world!",
 };
 console.log(obj.foo);
 console.log(obj.bar);
 
-const user = {
+type User = {
+  readonly name: string;
+  age: number;
+  height?: number;  // オプショナルなプロパティ
+}
+const user: User = {
   name: "poyo",
   age: 13,
 };
